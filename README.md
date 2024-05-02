@@ -15,6 +15,7 @@ React+NextJs for frontend <br/>
 Axios library for HTTP-queries <br/>
 Laravel for backend <br/>
 Sqlite for database <br/>
+TailwindCSS for styles <br/>
 
 #### How to Запустить?
 
