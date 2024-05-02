@@ -18,6 +18,7 @@ Sqlite for database <br/>
 TailwindCSS for styles <br/>
 
 #### How to Запустить?
+В своих из каждой папок запускать вот такие команды:
 
 — Frontend Server 
 
