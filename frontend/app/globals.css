@@ -1,0 +1,726 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Загрузка шрифтов */
+/* @font-face {
+  font-family: Comfortaa;
+  src: url(../fonts/Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Marck Script;
+  src: url(../fonts/MarckScript-Regular.ttf);
+} */
+
+/* Сброс всех стилей: */
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+/* Убираем внутренние и внешние отступы */
+ul,
+ol {
+padding: 0;
+margin: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+min-height: 100vh;
+scroll-behavior: smooth;
+text-rendering: optimizeSpeed;
+line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+max-width: 100%;
+display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+* {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+}
+
+/* Все основные стили: */
+
+/* Стили цветов для изменения темы */
+html{
+  background: rgb(55, 55, 55);
+}
+html *{
+  font-family: Comfortaa;
+}
+.grayColor{
+  color: #E2E2E2;
+}
+.whiteColor{
+  color: #FFF;
+}
+
+/* Контейнер всей страницы */
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 75px;
+  
+  margin: 0 auto;
+  width: 59.375%;
+}
+body *{
+  color: #d613c9;
+}
+
+/* Хедер */
+header{
+  width: 100%;
+  
+  display: flex;
+  padding-bottom: 0px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header *{
+  text-decoration: none;
+}
+
+header a:first-child{
+  font-family: Comfortaa;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60.9%; /* 21.924px */
+}
+
+header a.title{
+  font-family: Marck Script;
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+header a:last-child{
+  text-align: right;
+  font-family: Comfortaa;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60.9%; /* 21.924px */
+}
+
+header input[type=checkbox], label.burger{
+  display: none;
+}
+
+div.burgerLinks{
+  display: none;
+}
+
+/* Футер */
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 10px 0;
+}
+
+footer .footerTitle a{
+  font-family: Marck Script;
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+footer .footerLinks{
+  display: flex;
+  padding-bottom: 0px;
+  align-items: center;
+  gap: 55px;
+}
+
+footer .footerLinks a{
+  font-family: Comfortaa;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60.9%; /* 19.488px */
+  text-decoration: none;
+}
+@media(min-width:1920px) {
+  body{
+      width: 1130px;
+  }
+}
+@media(max-width:1500px) {
+  body{
+      width: 81.1%;
+  }
+}
+@media(max-width:1200px) {
+  body{
+      width: 72.1%;
+  }
+  header a.title {
+      font-size: 60px; 
+  }
+  header a:first-child, header a:last-child {
+      font-size: 24px; 
+  }
+  
+  footer .footerTitle a{
+      font-size: 60px;
+  }
+  footer .footerLinks {
+      gap: 36px;
+  }
+  footer .footerLinks a{
+      font-size: 24px; 
+  }
+}
+@media(max-width:1000px) {
+  footer{
+      flex-flow: column;
+  }
+}
+@media(max-width:800px) {
+  body{
+      width: 81.9%;
+  }
+  
+  header{
+      flex-flow: row wrap;
+      padding-top: 10px;
+  }
+  header a.title {
+      font-size: 36px;
+  }
+  header a:first-child{
+      order: 2;
+  }
+  header > a:last-child, header > a:first-child{
+      display: none;
+  }
+
+  div.burgerLinks{
+      position: absolute;
+      right: 85px;
+      top: 70px;
+
+      display: flex;
+      flex-flow: nowrap column;
+      align-items: end;
+      
+      gap: 10px;
+      
+      transform: translateX(-500%);
+      transition: all .3s;
+  }
+
+  /* Бургер🍔 */
+  label.burger {
+      display: block;
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+      
+      background: transparent;
+      width: 40px;
+      height: 26px;
+  }
+  label.burger::before,
+  label.burger::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 10px;
+      background: #13D68F;
+      
+  }
+  label.burger::before {
+      top: 0;
+      box-shadow: 0 11px 0 #13D68F;
+      transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+  }
+  label.burger::after {
+      bottom: 0;
+      transition: bottom .3s .15s, transform .3s;
+  }
+  /* Условие если нажать бургер */
+  .burgerСheckbox:checked ~ div.burgerLinks{
+      display: flex;
+      transform: translateX(0);
+  }
+  /* Анимэйшон */
+  header input[type=checkbox]:checked + .burger::before {
+      top: 11px;
+      transform: rotate(45deg);
+      box-shadow: 0 6px 0 rgba(0,0,0,0);
+      transition: box-shadow .15s, top .3s, transform .3s .15s;
+  }
+  header input[type=checkbox]:checked + .burger::after {
+      bottom: 11px;
+      transform: rotate(-45deg);
+      transition: bottom .3s, transform .3s .15s;
+  }
+  .burgerСheckbox:checked ~ div.burgerLinks{
+      right: 85px;
+  }
+}
+
+@media(max-width:600px) {
+  .burgerСheckbox:checked ~ div.burgerLinks{
+      right: 65px;
+  }
+}
+@media(max-width:400px) { 
+  body{
+      width: 90.625%;
+  }
+  header a.title {
+      font-size: 10vw;
+  }
+  .burgerСheckbox:checked ~ div.burgerLinks{
+      right: 45px;
+  }
+  footer{
+      gap: 30px;
+      padding-bottom: 30px;
+  }
+  footer .footerTitle a{
+      font-size: 54px;
+  }
+  footer .footerLinks{
+      flex-flow: wrap;
+      justify-content: center;
+  }
+  footer .footerLinks :first-child{
+      order: 3;
+  }
+}
+@media(max-width:256px) { 
+  footer .footerTitle a{
+      font-size: 42px;
+  }
+}
+/* Основной контент: */
+body > p{
+  font-size: 32px;
+  line-height: 127%;
+}
+strong.regular{
+  font-weight: 400;
+}
+strong.medium{
+  font-weight: 500;
+}
+
+strong.strong{
+  font-weight: 600;
+}
+strong.takesomepics{
+  font-family: 'Marck Script';
+  font-size: 48px;
+}
+
+.lastArticle{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px; 
+}
+.lastArticle p{
+  text-align: center;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 83%; /* 36.52px */
+}
+
+a.articleLink{
+  width: 100%;
+  height: 544px;
+
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+
+  transition: all .6s ease;
+
+  background: url(/images/articleImages/types_of_light_in_photography/comparasionOfLightsSchemes.jpg);
+  background-size: cover;
+  background-position: center;
+  
+  border-radius: 83px;
+  border: 4px solid var(--base, #13D68F);
+  box-shadow: 0px -109px 38px -27px rgba(0, 0, 0, 0.56) inset;
+  flex-shrink: 0;
+}
+a.articleLink p{
+  width: 86.11%;
+  height: 50px;
+
+  overflow: hidden;
+
+  text-align: center;
+  color: #FFF;
+  font-family: Comfortaa;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 104.9%; /* 25.176px */
+}
+
+
+/* Слайдер "Лучшие статьи" */
+div.bestArticles{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin: 0 auto;
+}
+
+div.bestArticles > p{
+  text-align: center;
+  font-family: Comfortaa;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 83%; /* 36.52px */
+  text-decoration: none;
+}
+
+div.slider{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  height: 570px;
+  overflow: hidden;
+}
+
+div.sliderWrapper{
+  width: 400%;
+  height: 544px;
+  display: flex;
+}
+
+a.sliderItem{
+  width: 25%;
+  height: 100%;
+
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+
+  transition: all .6s ease;
+
+  background: url(images/articleImages/how_to_choose_mirrored_cam/IMG_20231008_234343_422.jpg);
+  background-size: cover;
+  background-position: center;
+  
+  border-radius: 83px;
+  border: 4px solid var(--base, #13D68F);
+  box-shadow: 0px -109px 38px -27px rgba(0, 0, 0, 0.56) inset;
+  flex-shrink: 0;
+}
+
+a.sliderItem p{
+  width: 86.11%;
+  height: 50px;
+
+  overflow: hidden;
+
+  color: #FFF;
+  font-family: Comfortaa;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 104.9%; /* 25.176px */
+}
+
+div.slider div.sliderIndicators {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+label.sliderIndicator{
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  background-color: #13D68F;
+  border-radius: 5px;
+  transition: all .4s ease;
+  opacity: .5;
+}
+
+label.sliderIndicator:hover{
+  opacity: 0.8;
+}
+
+input[name="r"] {
+  position: absolute;
+  visibility: hidden;
+}
+#r1:checked, #r2:checked, #r3:checked, #r4:checked{
+  opacity: 0.8;
+}
+
+#r1:checked ~ .s1{
+  margin-left:37.5%;
+}
+#r2:checked ~ .s1{
+  margin-left: 12.5%;
+}
+#r3:checked ~ .s1{
+  margin-left: -12.5%;
+}
+#r4:checked ~ .s1{
+  margin-left: -37.5%;
+}
+
+
+
+/* Контейнер "Все статьи" */
+div.allArticles{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+div.allArticles > a{
+  text-align: center;
+  font-family: Comfortaa;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 83%; /* 36.52px */
+  text-decoration: none;
+}
+
+div.allArticles div.allArticlesWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+div.allArticlesWrapper > a{
+  display: flex;
+  width: 330px;
+  height: 400px;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+
+  padding-top: 200px;
+
+  border-radius: 15px;
+  border: 1px solid #13D68F;
+}
+
+div.allArticlesWrapper > a div.articleText{
+  display: flex;
+  width: 293px;
+  height: 181px;
+  padding-top: 15px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+div.allArticlesWrapper > a div.articleText h4{
+  width: 290px;
+  height: 52px;
+  flex-shrink: 0;
+
+  font-family: Comfortaa;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 108.4%; /* 26.016px */
+}
+
+div.allArticlesWrapper > a div.articleText p{
+  width: 290px;
+  height: 100px;
+  flex-shrink: 0;
+  
+  /* обрыв текста */
+  overflow: hidden;
+  
+  color: #FFF;
+  font-family: Comfortaa;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 104%; /* 16.64px */
+}
+
+div.allArticlesWrapper > a div.line{
+  width: 330px;
+  height: 1px;
+  
+  background: #13D68F;
+}
+
+div.allArticlesWrapper a{
+  background-size: 340px 200px;
+  background-repeat: no-repeat;
+}
+
+/* a.miniFirstArticle{
+  background: url(images/indexImages/жесть.jpg);
+}
+a.miniSecondArticle{
+  background: url(images/indexImages/earth.jpg);
+}
+a.miniThirdArticle{
+  background: url(images/indexImages/car.jpg);
+} */
+
+/* медиа-запросы */
+
+@media(max-width:1200px) {
+  div.bestArticles a, div.allArticles a{
+      font-size: 32px;
+  }
+  
+  div.sliderWrapper{
+      height: 357px;
+  }
+  div.slider{
+      height: 382px;
+  }
+  a.sliderItem{
+      border-radius: 60px;
+  }
+  a.sliderItem p{
+      font-size: 18px;
+  }
+  a.articleLink{
+      border-radius: 60px;
+      height: 382px;
+  }
+  a.articleLink p{
+      font-size: 18px;
+  }
+}
+@media(max-width:400px) {
+  div.bestArticles p, div.allArticles a{
+      font-size: 24px;
+  }
+  div.slider{
+      height: 250px;
+  }
+  a.sliderItem{
+      border-radius: 40px; 
+      border: 1px solid #13D68F;
+  }
+  a.sliderItem p{
+      width: 80%;
+      font-size: 14px;
+      height: auto;
+  }
+  a.articleLink{
+      border-radius: 40px; 
+      height: 250px;
+      border: 1px solid #13D68F;
+  }
+  a.articleLink p{
+      width: 80%;
+      font-size: 14px;
+      height: auto;
+  }
+  label.sliderIndicator {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+  }
+}
+
+
+.content{
+  width: fit-content;
+}
+

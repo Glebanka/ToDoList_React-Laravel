@@ -1,0 +1,15 @@
+<svg width="488" height="375" viewBox="0 0 488 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M134 75.0002C134 75.0002 178.5 0.000113527 184.5 0.000113527H303.5C311 0.000113527 355.5 75.0002 355.5 75.0002H134Z" fill="#13D68F"/>
+<rect x="39" y="28" width="75" height="31" rx="8" fill="#13D68F"/>
+<rect y="75" width="488" height="300" rx="56" fill="#13D68F"/>
+<rect x="33" y="132" width="422" height="210" rx="30" fill="#373737"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M310.683 375C364.557 350.42 402 296.083 402 233C402 146.844 332.156 77 246 77C159.844 77 90 146.844 90 233C90 296.083 127.443 350.42 181.317 375H310.683Z" fill="#373737"/>
+<rect x="86" y="121" width="322" height="13" fill="#373737"/>
+<circle cx="246" cy="233" r="132" fill="#13D68F"/>
+<circle cx="245" cy="234" r="97" fill="#373737"/>
+<ellipse cx="214.969" cy="193.018" rx="20.5189" ry="29.8085" transform="rotate(49.1524 214.969 193.018)" fill="#13D68F"/>
+<ellipse cx="63.5" cy="139.5" rx="30.5" ry="33.5" fill="#373737"/>
+<ellipse cx="424.5" cy="139.5" rx="30.5" ry="33.5" fill="#373737"/>
+<rect x="444" y="140" width="11" height="22" fill="#373737"/>
+<rect x="33" y="140" width="11" height="22" fill="#373737"/>
+</svg>
