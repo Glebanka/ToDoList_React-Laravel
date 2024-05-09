@@ -23,13 +23,10 @@ TailwindCSS for styles <br/>
 — Frontend Server 
 
 ```bash
+npm install next react react-dom axios
+```
+```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 — Backend Server <br/>
