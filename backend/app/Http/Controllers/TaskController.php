@@ -31,7 +31,7 @@ class TaskController extends Controller
       // Возвращаем созданную задачу в качестве ответа
       return response()->json($task, 201);
     }
-    public function delete($id)
+    public function delete(Request $request, $id)
     {
         $task = Task::find($id);
 

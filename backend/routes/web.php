@@ -20,12 +20,11 @@ Route::get('/', function () {
 });
 Route::get('api/tasks', [TaskController::class, 'index']);
 
-
 Route::get('/api/tasks/html', function () {
   $tasks = Task::all();
   return view('api', ['tasks' => $tasks]);
-});
+});//возращает html где можно забирать csrf токен
 Route::middleware(['web'])->group(function () {
-  Route::delete('api/tasks/{id}', [TaskController::class, 'delete']);
+  Route::delete('api/tasks/delete/{id}', [TaskController::class, 'delete']);
   Route::post('api/tasks', [TaskController::class, 'store']);
 });
