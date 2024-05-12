@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { Viewport } from 'next';
 import "./globals.css";
-import Header from './Header/header';
+import Header from './components/Header/header';
 import Script from "next/script";
 
  

@@ -6,7 +6,7 @@ import TodoList from "./components/TodoList/todolist";
 export default function Home() {
   
   return (
-    <main>
+    <main className="w-342px">
       <TodoList />     
       {/* <ThemeProvider>
         <ThemedComponent />

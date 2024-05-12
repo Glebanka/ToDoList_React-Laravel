@@ -18,14 +18,12 @@ class TaskController extends Controller
       $validatedData = $request->validate([
         'title' => 'required|string|max:255',
         'description' => 'nullable|string',
-        'completed' => 'boolean',
       ]);
       
       // Создание новой задачи
       $task = new Task();
       $task->title = $validatedData['title'];
       $task->description = $validatedData['description'] ?? null;
-      $task->completed = $validatedData['completed'] ?? false;
       $task->save();
       
       // Возвращаем созданную задачу в качестве ответа
